@@ -1,0 +1,33 @@
+.word {
+  opacity: 0;
+  color: #ff6a00;
+  transition: opacity 0.3s ease, color 0.3s ease, filter 0.3s ease;
+  display: inline-block;
+}
+
+.word.landed {
+  opacity: 1;
+  color: #000;
+  filter: brightness(1.0);
+}
+
+.word.final {
+  color: #ff0000;
+  filter: brightness(1.8);
+}
+
+/* EVO = neuer Standard, REV = alter Look */
+.word.evo {
+  animation: pulse-glow 1.2s infinite;
+  filter: brightness(1.8);
+}
+
+.word.rev {
+  filter: brightness(1.0);
+}
+
+@keyframes pulse-glow {
+  0% { filter: brightness(1.0); }
+  50% { filter: brightness(1.8); }
+  100% { filter: brightness(1.0); }
+}
